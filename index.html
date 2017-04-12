@@ -57,6 +57,10 @@
         padding:5px;
         text-decoration: none;
       }
+      .select{
+    height:100px;
+    overflow:scroll;
+    }
 
   </style>
 
@@ -66,25 +70,38 @@
 <div class="parallax"><br><br><br><br>
     <div class=" text-center headback"><br>
       <h1>Foodies Hub</h1><br>
-    </div><br><br><br>
+    </div><br>
 
   <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-10 text-center tagback"><br>
-      <h3>Delicious Food. To fit your lifestyle.<h3><br><br>
-      <ul>
-        <li>
-          <select>
-            <option value="#">Choose Your Location</option>
-            <option value="hauz khas">hauz khas</option>
-            <option value="lajpat nagar">lajpat nagar</option>
-            <option value="rohini">rohini</option>
-            <option value="vaishali">vaishali</option>
-            <option value="saket">saket</option>
-          </select>
-        </li>
-        <li><input type="submit" value="Order Now"/> </li>
-      </ul><br>
+      <h3>Delicious Food. To fit your lifestyle.<h3><br>
+
+        <div class="container">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-6">
+            <select style="width:500px;" onfocus='this.size=4;'onblur='this.size=1;'onchange='this.size=1; this.blur();'>
+              <option>Select Your Location</option>
+              <option>Hauz Khas</option>
+              <option>Green Park</option>
+              <option>Lajpat Nagar</option>
+              <option>Rohini</option>
+              <option>Kashmiri Gate</option>
+              <option>M. G. Road</option>
+              <option>Vaishali</option>
+              <option>Akshardham</option>
+              <option>Badarpur</option>
+              <option>Chandani Chowk</option>
+              <option>Film City</option>
+              <option>Kalkaji</option>
+              <option>Andheri East</option>
+            </select>
+            </div>
+            <div class="col-sm-4">
+            <a href="#" class="btn btn-info" role="button">Order Now</a></div><br><br>
+          </div>
+
+
     </div>
     <div class="col-sm-1"></div>
   </div>
@@ -138,6 +155,31 @@
     </a>
   </div>
 </div>
+<br><br>
+<!-- USP Of the Site -->
+<div>
+
+  <!-- Indridents-->
+    <div class="thumbnail text-center">
+        <img src="Images\Back\ingredents.jpg" alt="Chef" style="width:70%" style="height:550%">
+        <div class="caption">
+          <p>Hand Plucked Ingredients</p>
+        </div>
+  </div>
+  <!-- Chef-->
+    <div class="thumbnail text-center">
+        <img src="Images\Back\chef.jpg" alt="Chef" style="width:50%">
+        <div class="caption">
+          <p>Our Executive Chef.</p>
+        </div>
+  </div>
+
+  <!--Video Of Delivery -->
+  <div class="text-center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_XnRDNpJbKI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
 
 <!-- Contact Us Section -->
 <div class="text-center">
@@ -178,5 +220,8 @@
   </div>
 
 </div>
+
+
+
 </body>
 </html>
