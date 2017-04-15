@@ -44,102 +44,73 @@
    <div class="navbar-header text-center">
       <a class="navbar-text ">Location</a>
     </div>
+    <div class="nav navbar-nav navbar-right">
+      <a href="#" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+        </a>
+    </div>
+    <br><br><br>
+
+    <div class="col-sm-6">
+      <select style="width:200px;" onfocus='this.size=4;'onblur='this.size=1;'onchange='this.size=1; this.blur(); 'id="sel1">
+        <option disabled>Select Your Cuisines</option>
+      </select>
+      </div>
+      <script>
+      $(document).ready(function(){
+
+      $.ajax("http://acadprojects.com/py/fabsos/cuisines?location_id=1", {
+            success: function(content) {
+              console.log("success")
+              a = content.cuisines;
+              for (i = 0; i < a.length; i++) {
+                $("#sel1").append("<option class='option_content' id="+i +">"+a[i]["cuisine_name"]+"</option>");
+              //  $("#1").after("<li id='1'><a href='#'>"+a[i]["location_name"]+"</a></li>");
+
+              }
+            },
+            error: function() {
+               console.log("error");
+            }
+         });
+         });
+      //
+      last_value=22;
+      $(".button3").click(function(){
+          loc = $(".form-control option:selected").val();
+          if (loc!=="Please Select1") {
+          console.log(loc);
+          localStorage.setItem("location", loc);
+
+        }
+
+      });
+      </script>
 
   </div>
 </nav>
+<hr>
 <!--Menu Images-->
-<div>
-  <div class="container text-center">
-    <button   data-target="#dem"></button>
-    <div id="dem" class="collapse in">
-  <div class="row">
-    <div class="col-md-4">
-      <img src="Images\Burger\Burger1.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Burgers</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Dessert\ice-cream-chocolate-dessert-mint-beautifyl.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Dessert</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Biryani\hyderabadi-dum-chicken-biryani-wallpapers.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Biryani</p>
-          </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <img src="Images\Chicken\Karhai Chicken.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Chicken</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Bengali\ilish_paturi2.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Bengali Cuisine</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\North\Dahivada.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>North Indian Cuisine</p>
-          </div>
-    </div>
-  </div>
-</div>
-</div>
-  <div class="container text-center">
+<div class="text-center"><hr>
+  <h2>Burger</h2>
+  <iframe width="100%" height="500px" src="burger.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Breads, Cakes & Cookies</h2>
+  <iframe width="100%" height="500px" src="bread.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Biryani</h2>
+  <iframe width="100%" height="500px" src="biryani.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Egg </h2>
+  <iframe width="100%" height="500px" src="egg.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Desserts</h2>
+  <iframe width="100%" height="500px" src="dessert.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Pure Non Veg</h2>
+  <iframe width="100%" height="500px" src="Meat.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Pasta</h2>
+  <iframe width="100%" height="500px" src="pasta.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Pizza</h2>
+  <iframe width="100%" height="500px" src="pizza.html" frameborder="0" allowfullscreen></iframe><hr>
+  <h2>Wraps</h2>
+  <iframe width="100%" height="500px" src="wrap.html" frameborder="0" allowfullscreen></iframe><hr>
 
-    <div id="demo" class="collapse out">
-      <div class="row">
-    <div class="col-md-4">
-      <img src="Images\Thali\Dinner_Veg.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Quick Meals</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Pizza\7033732-pizza.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Pizza</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Wrap\cornwrap.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Wraps</p>
-          </div>
-    </div>
-  </div>
-      <div class="row">
-    <div class="col-md-4">
-      <img src="Images\South\uttapam.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>South Indian Cuisine</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Fish\pexels-photo-262959.jpeg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Fish</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Paneer\paneer Kofta.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Paneer</p>
-          </div>
-    </div>
-  </div>
-    </div>
-    <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo"><img src ="Images\media\Arrows-Down.png" height=50px; width=200px;></button>
-  </div>
 </div>
 
 

@@ -33,6 +33,7 @@
         text-decoration: none;
       }
   </style>
+
 </head>
 <body>
 <!--Nav Bar-->
@@ -42,7 +43,10 @@
     <a class="navbar-brand" href="#"><b>Foodies Hub</b></a>
     </div>
    <div class="navbar-header text-center">
-      <a class="navbar-text ">Location</a>
+      <a class="navbar-text "><p></p></a>
+      <script>
+      $("p").text(localStorage.getitem("location"));
+      </script>
     </div>
 
   </div>
@@ -80,15 +84,15 @@
           </div>
     </div>
     <div class="col-md-4">
-      <img src="Images\Bengali\ilish_paturi2.jpg" width="400px" height="200px" class="item">
+      <img src="Images\Bread\baked-goods-gluten.jpg" width="400px" height="200px" class="item">
       <div class="caption">
-            <p>Bengali Cuisine</p>
+            <p>Bread Cakes & Cookies</p>
           </div>
     </div>
     <div class="col-md-4">
-      <img src="Images\North\Dahivada.jpg" width="400px" height="200px" class="item">
+      <img src="Images\egg\Spinach Egg.jpg" width="400px" height="200px" class="item">
       <div class="caption">
-            <p>North Indian Cuisine</p>
+            <p>Egg</p>
           </div>
     </div>
   </div>
@@ -99,9 +103,9 @@
     <div id="demo" class="collapse out">
       <div class="row">
     <div class="col-md-4">
-      <img src="Images\Thali\Dinner_Veg.jpg" width="400px" height="200px" class="item">
+      <img src="Images\Pasta\white.jpeg" width="400px" height="200px" class="item">
       <div class="caption">
-            <p>Quick Meals</p>
+            <p>Pasta</p>
           </div>
     </div>
     <div class="col-md-4">
@@ -117,26 +121,7 @@
           </div>
     </div>
   </div>
-      <div class="row">
-    <div class="col-md-4">
-      <img src="Images\South\uttapam.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>South Indian Cuisine</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Fish\pexels-photo-262959.jpeg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Fish</p>
-          </div>
-    </div>
-    <div class="col-md-4">
-      <img src="Images\Paneer\paneer Kofta.jpg" width="400px" height="200px" class="item">
-      <div class="caption">
-            <p>Paneer</p>
-          </div>
-    </div>
-  </div>
+
     </div>
     <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#demo"><img src ="Images\media\Arrows-Down.png" height=50px; width=200px;></button>
   </div>

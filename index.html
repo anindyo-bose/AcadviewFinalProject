@@ -80,23 +80,41 @@
         <div class="container">
           <div class="col-sm-2"></div>
           <div class="col-sm-6">
-            <select style="width:500px;" onfocus='this.size=4;'onblur='this.size=1;'onchange='this.size=1; this.blur();'>
+            <select style="width:500px;" onfocus='this.size=4;'onblur='this.size=1;'onchange='this.size=1; this.blur(); 'id="sel1">
               <option disabled>Select Your Location</option>
-              <option value="Hauz Khas">Hauz Khas</option>
-              <option value="Green Park">Green Park</option>
-              <option value="Lajpat Nagar">Lajpat Nagar</option>
-              <option value="Rohini">Rohini</option>
-              <option value="Kashmiri Gate">Kashmiri Gate</option>
-              <option value="M. G. Road">M. G. Road</option>
-              <option value="Vaishali">Vaishali</option>
-              <option value="Akshardham">Akshardham</option>
-              <option value="Badarpur">Badarpur</option>
-              <option value="Chandani Chowk">Chandani Chowk</option>
-              <option value="Film City">Film City</option>
-              <option value="Kalkaji">Kalkaji</option>
-              <option value="Andheri East">Andheri East</option>
+
             </select>
             </div>
+            <script>
+            $(document).ready(function(){
+
+            $.ajax("http://acadprojects.com/py/fabsos/location?city_id=1", {
+                  success: function(content) {
+                    console.log("success")
+                    a = content.data;
+                    for (i = 0; i < a.length; i++) {
+                      $("#sel1").append("<option class='option_content' id="+i +">"+a[i]["location_name"]+"</option>");
+                    //  $("#1").after("<li id='1'><a href='#'>"+a[i]["location_name"]+"</a></li>");
+
+                    }
+                  },
+                  error: function() {
+                     console.log("error");
+                  }
+               });
+               });
+            //
+            last_value=22;
+            $(".button3").click(function(){
+                loc = $(".form-control option:selected").val();
+                if (loc!=="Please Select1") {
+                console.log(loc);
+                localStorage.setItem("location", loc);
+                
+              }
+
+            });
+            </script>
             <div class="col-sm-4">
               <input type="submit" class="btn btn-info" role="button" value="Order Now" /></div>
           <br><br>
